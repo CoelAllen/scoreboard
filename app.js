@@ -6,7 +6,10 @@ function addScoreOne() {
   scoreOne++;
   console.log(scoreOne);
   drawScoreOne();
-
+}
+function addThreeScoreOne() {
+  scoreOne += 3;
+  drawScoreOne();
 }
 function addScoreTwo() {
   scoreTwo++;
@@ -14,17 +17,28 @@ function addScoreTwo() {
   drawScoreTwo();
 
 }
+function addThreeScoreTwo() {
+  scoreTwo += 3;
+  drawScoreTwo();
+}
 
 function drawScoreOne() {
-  let scoreOneElem = document.getElementById("scoreOne")
+  document.getElementById("scoreOne").innerHTML = `<div> ${scoreOne} </div>`
 
 }
 
 function drawScoreTwo() {
-  let scoreTwoElem = document.getElementById("scoreTwo")
+  document.getElementById("scoreTwo").innerHTML = `<div> ${scoreTwo} </div>`
 
 }
 
 function resetScores() {
+  scoreOne = 0;
+  scoreTwo = 0;
+  drawScoreOne()
+  drawScoreTwo()
 
 }
+
+drawScoreOne()
+drawScoreTwo()
